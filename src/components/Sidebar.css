@@ -9,6 +9,10 @@
     position: fixed;
 }
 
+.sidebar-logo {
+    width: 200px;
+}
+
 /* Sidebar Title */
 .sidebar-title {
     font-size: 1.5rem;

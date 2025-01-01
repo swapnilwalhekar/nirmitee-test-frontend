@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { createAppointment } from "../services/api";
+import "./appoitmentForm.css";
 
 function AppointmentForm({ setAppointments }) {
   const [formData, setFormData] = useState({

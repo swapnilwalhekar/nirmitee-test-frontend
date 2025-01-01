@@ -12,9 +12,14 @@ export const createAppointment = async (appointment) => {
   return response.data;
 };
 
-export const updateAppointment = async (id, updatedData) => {
-  const response = await axios.put(`${API_URL}/${id}`, updatedData);
-  return response.data;
+export const updateAppointment = async (id, data) => {
+  try {
+    const response = await axios.put(`${API_URL}/${id}`, data);
+    return response.data;
+  } catch (error) {
+    console.error("Error updating appointment:", error);
+    throw error;
+  }
 };
 
 export const deleteAppointment = async (id) => {
